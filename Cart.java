@@ -3,13 +3,13 @@ package com.example.lesson21;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Cart<Product> {
-    public Cart(List<Product> productList) {
+public class Cart<T> {
+    public Cart(List<T> productList) {
         this.productList = productList;
     }
-    List<Product> productList = new ArrayList<>();
+    List<T> productList = new ArrayList<>();
 
-    public void addToCart(Product item) {
+    public void addToCart(T item) {
         productList.add(item);
     }
 
@@ -18,7 +18,7 @@ public class Cart<Product> {
     }
 
     public void outputProductSpecifications() {
-        for (Product specs:productList) {
+        for (T specs:productList) {
             System.out.println(specs + "\n");
         }
     }
